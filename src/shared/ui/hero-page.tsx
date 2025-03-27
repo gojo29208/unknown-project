@@ -4,7 +4,7 @@ export function HeroPage() {
 	return (
 		<div className='min-[520px]:w-md md:w-xl lg:w-3xl w-full mx-auto p-4 border rounded-xl space-y-4 text-center font-sans'>
 			{/* Header */}
-			<div className='border rounded-md py-2 px-4 text-sm font-semibold uppercase'>
+			<div className='py-2 px-4 text-sm font-semibold uppercase md:text-xl'>
 				Страна Должна знать
 				<br />
 				Своих ГЕРОЕВ

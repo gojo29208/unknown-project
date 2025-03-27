@@ -23,7 +23,7 @@ export function Timer() {
 		return `${h}:${m}:${s}`
 	}
 	return (
-		<div className='text-4xl font-bold border rounded-md py-4'>
+		<div className='text-4xl font-bold py-4'>
 			{formatTime(time)}
 		</div>
 	)
