@@ -1,8 +1,8 @@
 import { Timer } from './timer'
 
-export function HeroPage() {
+export function HeroCard() {
 	return (
-		<div className='min-[520px]:w-md md:w-xl lg:w-3xl w-full mx-auto p-4 border rounded-xl space-y-4 text-center font-sans'>
+		<div className='min-[520px]:w-md md:w-xl lg:w-3xl w-full mx-auto p-4 space-y-4 text-center font-sans'>
 			{/* Header */}
 			<div className='py-2 px-4 text-sm font-semibold uppercase md:text-xl'>
 				Страна Должна знать
@@ -13,11 +13,15 @@ export function HeroPage() {
 			<Timer />
 
 			{/* Play Button */}
-			<div className='border rounded-md p-10 aspect-video flex justify-center items-center'>
-				<div className='w-12 h-12 mx-auto bg-black text-white rounded-full flex items-center justify-center'>
-					▶
-				</div>
-			</div>
+
+			<iframe
+				className='w-full aspect-video rounded-2xl'
+				src='https://www.youtube.com/embed/pu5lh0CCZyQ'
+				title='В Украине заговорили о смерти Путина / Сорвана спецоперация'
+				frameBorder='0'
+				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+				allowFullScreen
+			></iframe>
 
 			{/* Фото блок */}
 			<div className='grid grid-cols-3 gap-2'>
@@ -32,7 +36,9 @@ export function HeroPage() {
 			</div>
 
 			{/* Empty text block */}
-			<div className='border rounded-md py-6' />
+			<div className='text-2xl py-6 flex justify-center items-center'>
+				Какой-то текст
+			</div>
 
 			{/* Контакты */}
 			<div className='text-sm text-gray-700 space-y-1'>
