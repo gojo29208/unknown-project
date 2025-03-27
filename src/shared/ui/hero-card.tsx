@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Timer } from './timer'
 
 export function HeroCard() {
@@ -24,14 +25,17 @@ export function HeroCard() {
 			></iframe>
 
 			{/* Фото блок */}
-			<div className='grid grid-cols-3 gap-2'>
-				{['Фото', 'Фото', 'Фото'].map((label, index) => (
-					<div
+			<div className='flex flex-wrap gap-2'>
+				{['/image-template.png', '/image-template.png', '/image-template.png'].map((src, index) => (
+					<Image
 						key={index}
-						className='border rounded-md py-6 text-xs text-gray-600 aspect-square flex items-center justify-center'
-					>
-						{label}
-					</div>
+						src={src}
+						className='relative! flex-1 text-gray-600 flex items-center justify-center overflow-hidden rounded-2xl'
+						alt='image'
+						width={100}
+						height={100}
+						style={{ objectFit: 'cover', objectPosition: 'center' }}
+					/>
 				))}
 			</div>
 
