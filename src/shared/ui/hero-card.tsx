@@ -34,9 +34,9 @@ export function HeroCard() {
 			{/* Фото блок */}
 			<div className='flex flex-wrap gap-2'>
 				{[
-					'/image-template.png',
-					'/image-template.png',
-					'/image-template.png',
+					'/1.jpeg',
+					'/2.jpeg',
+					'/3.jpeg',
 				].map((src, index) => (
 					<Image
 						key={index}
