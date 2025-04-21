@@ -1,12 +1,12 @@
 import { ThemeProvider } from '@/shared/providers/theme-provider'
 import type { Metadata } from 'next'
-import { Nunito } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-const nunito = Nunito({
+const nunito = Inter({
   subsets: ["latin", "cyrillic"],
   display: "swap",
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 

@@ -120,3 +120,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@utility horizontal-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 3%,
+    black 50%,
+    black 50%,
+    transparent 95%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 3%,
+    black 50%,
+    black 50%,
+    transparent 95%
+  );
+}
+
+
+@utility vertical-mask-bottom {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 50%,
+    transparent 80%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 50%,
+    transparent 80%
+  );
+}
