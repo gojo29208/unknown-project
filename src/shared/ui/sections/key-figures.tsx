@@ -14,7 +14,7 @@ export function KeyFigures() {
 					<div className='flex items-start justify-between bg-zinc-900 rounded-3xl p-6 relative'>
 						<div className='flex flex-col justify-center items-start gap-4'>
 							<Image
-								src='/1.jpeg'
+								src='/3.jpeg'
 								alt='first-photo'
 								width={80}
 								height={80}
@@ -158,7 +158,7 @@ export function KeyFigures() {
 					<div className='flex relative items-start justify-between bg-zinc-900 rounded-3xl p-6'>
 						<div className='flex flex-col justify-center items-start gap-4 '>
 							<Image
-								src='/3.jpeg'
+								src='/1.jpeg'
 								alt='third-photo'
 								width={80}
 								height={80}

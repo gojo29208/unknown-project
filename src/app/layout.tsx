@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@/shared/providers/theme-provider'
+// import { ThemeProvider } from '@/shared/providers/theme-provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -23,16 +23,18 @@ export default function RootLayout({
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body
-				className={`${nunito.className} antialiased`}
+				className={`${nunito.className} antialiased dark`}
+				
 			>
-				<ThemeProvider
+				{/* <ThemeProvider
 					attribute='class'
 					defaultTheme='system'
 					enableSystem
 					disableTransitionOnChange
-				>
+				> */}
 					{children}
-				</ThemeProvider>
+				{/* </ThemeProvider> */}
+
 			</body>
 		</html>
 	)
