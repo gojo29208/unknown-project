@@ -41,7 +41,7 @@ const newsItems: NewsItem[] = [
 		title: 'Медійна зачистка: Telegram-канали, Maybach і піар-кампанії',
 		subtitle: 'ЛАДНО, І ТАК ЗІЙДЕ',
 		description:
-			'Як створюють "ідеальний образ" і зачищають критику довкола Шкіля через гроші та анонімні канали',
+			'Цікаво – Живе з ескортницею, ховається від українського правосуддя, не їздить на Uklon, використовує Trustee',
 		image: '/carousel-3.jpeg',
 	},
 	{
@@ -70,8 +70,8 @@ export function NewsCarousel() {
 				<CarouselContent>
 					{newsItems.map(item => (
 						<CarouselItem key={item.id} className='md:basis-1/2 lg:basis-1/3'>
-							<div className='h-full flex flex-col'>
-								<div className='relative h-48 sm:h-56 md:h-64 overflow-hidden'>
+							<div className='h-full flex flex-col overflow-hidden rounded-3xl  bg-zinc-900'>
+								<div className='relative h-48 sm:h-56 md:h-64'>
 									<Image
 										fill
 										src={item.image || '/placeholder.svg'}
@@ -87,7 +87,7 @@ export function NewsCarousel() {
 									</div> */}
 								</div>
 
-								<div className='p-4 flex flex-col flex-grow rounded-3xl overflow-hidden! bg-zinc-900'>
+								<div className='p-4 flex flex-col flex-grow'>
 									<h3 className='text-white text-lg sm:text-xl font-bold mb-2'>
 										{item.title}
 									</h3>
@@ -107,6 +107,9 @@ export function NewsCarousel() {
 						</CarouselItem>
 					))}
 				</CarouselContent>
+				<p className='text-xs italic text-center mt-4 text-white opacity-70'>
+					* На зображеннях — реальні фотографії
+				</p>
 				<div className='flex justify-center mt-6 gap-4'>
 					<CarouselPrevious className='!relative cursor-pointer [&>svg]:size-6! left-auto !translate-none w-12 h-12 rounded-full bg-yellow-500! hover:bg-yellow-400 flex items-center justify-center text-black transition-colors' />
 					<CarouselNext className='!relative [&>svg]:size-6! cursor-pointer right-auto !translate-none w-12 h-12 rounded-full bg-yellow-500! hover:bg-yellow-400 flex items-center justify-center text-black transition-colors' />

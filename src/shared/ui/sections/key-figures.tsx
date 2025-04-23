@@ -1,212 +1,216 @@
 import Image from 'next/image'
 
+const profiles = [
+	{
+		number: '01',
+		name: 'Максим Шкіль',
+		position: 'Бізнесмен, олігарх нового часу',
+		imageSrc: '/3.jpeg',
+		details: [
+			{
+				label: 'Неофіційно',
+				description: 'Фронтмен багатомільярдних схем',
+			},
+			{
+				label: 'Сфери',
+				description:
+					"Дороги, мости, метро, кар'єри, агробізнес, логістика, автосалони",
+			},
+			{
+				label: 'Скандали',
+				description:
+					"Завищення вартості робіт на сотні мільйонів, Зв'язки з Партією регіонів, медіа-шантаж",
+			},
+			{
+				label: 'Особлива прикмета',
+				description:
+					'Офшори на Мадейрі, paybach для піару, покупка лояльності медіа',
+			},
+		],
+	},
+	{
+		number: '02',
+		name: 'Андрій Рубель (ДСР)',
+		position: 'Голова Департаменту стратегічних розслідувань',
+		imageSrc: '/2.jpeg',
+		details: [
+			{
+				label: 'Неофіційно',
+				description: 'Тіньовий дах схем Шкіля',
+			},
+			{
+				label: 'Посада',
+				description: 'Департамент стратегічних розслідувань (ДСР)',
+			},
+			{
+				label: 'Роль',
+				description:
+					'Захист від правоохоронних органів, «імунітет» для підрядів',
+			},
+			{
+				label: 'Скандали',
+				description: 'Політичне лобіювання «своїх» бізнесменів',
+			},
+		],
+	},
+	{
+		number: '03',
+		name: 'Роман Кравець',
+		position: 'Медіа-шантажист',
+		imageSrc: '/1.jpeg',
+		details: [
+			{
+				label: 'Неофіційно',
+				description: 'Куратор Telegram-каналу «Джокер»',
+			},
+			{
+				label: 'Позиція',
+				description: 'Публічний журналіст, тіньовий медіакілер',
+			},
+			{
+				label: 'Роль',
+				description: 'Вимагач',
+			},
+			{
+				label: 'Цікаво',
+				description: 'Замішаний у проплачених медіакампаніях',
+			},
+		],
+	},
+]
+
 export function KeyFigures() {
 	return (
-		<div className='flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-30'>
+		<div className='flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-30 relative'>
 			<p className='text-sm text-center text-[#C62828] uppercase'>
 				Ключові фігури
 			</p>
 			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-15'>
 				Дійові фігури <br /> великих корупційних схем
 			</h2>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-				<div className='flex flex-col gap-2'>
-					<div className='flex items-start justify-between bg-zinc-900 rounded-3xl p-6 relative'>
-						<div className='flex flex-col justify-center items-start gap-4'>
-							<Image
-								src='/3.jpeg'
-								alt='first-photo'
-								width={80}
-								height={80}
-								className='w-20 h-20 rounded-2xl'
-								style={{ objectFit: 'cover', objectPosition: 'center' }}
-							/>
-							<div>
-								<h2 className='text-white text-2xl font-bold'>Максим Шкіль</h2>
-								<p className='text-gray-400'>Бізнесмен, олігарх нового часу</p>
-							</div>
-						</div>
-						<div className='bg-amber-700/20 text-amber-500 px-3 py-1 rounded-full text-sm whitespace-nowrap absolute right-6 top-6'>
-							41 Вік
-						</div>
+
+			<div className='space-y-6'>
+				{profiles.map(profile => (
+					<ProfileCard
+						key={profile.name}
+						number={profile.number}
+						name={profile.name}
+						position={profile.position}
+						details={profile.details}
+						imageSrc={profile.imageSrc}
+					/>
+				))}
+			</div>
+
+			<div className='absolute p-2 overflow-hidden w-[329px] h-[419px] -left-95 top-110 rotate-5 rounded-4xl'>
+				<Image
+					fill
+					src='/forbes.jpg'
+					alt='forbes'
+					className='opacity-20'
+					style={{
+						objectFit: 'cover',
+						objectPosition: 'center',
+						scale: '1.05',
+					}}
+				/>
+			</div>
+
+			<Image
+				src='/joker.jpg'
+				alt='joker'
+				className='opacity-20 absolute -left-95 top-250 -rotate-5 rounded-4xl'
+				width={329}
+				height={419}
+			/>
+
+			<Image
+				src='/pis.jpg'
+				alt='pis'
+				className='opacity-20 absolute -right-95 top-100 -rotate-5 rounded-4xl'
+				width={329}
+				height={419}
+			/>
+
+			<Image
+				src='/rub.jpg'
+				alt='rub'
+				className='opacity-20 absolute -right-95 top-210 rotate-7 rounded-4xl'
+				width={329}
+				height={419}
+			/>
+
+			<Image
+				src='/dog.jpg'
+				alt='dog'
+				className='opacity-20 absolute -right-95 top-320 -rotate-5 rounded-4xl'
+				width={329}
+				height={419}
+			/>
+		</div>
+	)
+}
+
+interface ProfileCardProps {
+	number: string
+	name: string
+	position: string
+	details: {
+		label: string
+		description: string
+	}[]
+	imageSrc: string
+}
+
+interface ProfileCardProps {
+	number: string
+	name: string
+	position: string
+	details: {
+		label: string
+		description: string
+	}[]
+	imageSrc: string
+}
+
+export function ProfileCard({
+	number,
+	name,
+	position,
+	details,
+	imageSrc,
+}: ProfileCardProps) {
+	return (
+		<div className='rounded-3xl overflow-hidden mb-4 max-w-[600px] mx-auto'>
+			<div className='relative flex flex-col'>
+				<div className='text-amber-300 font-semibold absolute top-6 right-7 bg-amber-400/20 rounded-full w-10 flex justify-center items-center px-2 py-1'>
+					{number}
+				</div>
+
+				<div className='flex flex-col gap-4 items-start p-6 bg-neutral-800'>
+					<div className='relative w-22 h-22 rounded-full overflow-hidden mr-4'>
+						<Image
+							src={imageSrc || '/placeholder.svg'}
+							alt={name}
+							fill
+							className='object-cover'
+						/>
 					</div>
-
-					<div className='flex flex-col bg-zinc-900 rounded-3xl p-6 min-h-[520px]'>
-						<div>
-							<h3 className='text-white text-lg mb-2'>Неофіційно</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Фронтмен багатомільярдних схем
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Сфери</h3>
-							<div className='flex flex-wrap gap-2 mb-2'>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Дороги
-								</div>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Мости
-								</div>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Метро
-								</div>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Карʼєри
-								</div>
-							</div>
-							<div className='flex flex-wrap gap-2 mb-2'>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Агробізнес
-								</div>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Логістика
-								</div>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Автосалони
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Скандали</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Завищення вартості робіт на сотні мільйонів
-							</div>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Звʼязки з Партією регіонів, медіаманіпуляції
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Особлива прикмета</h3>
-							<div className='flex flex-wrap gap-2 mb-2'>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Офшори на Мадейрі
-								</div>
-								<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full'>
-									Maybach для піару
-								</div>
-							</div>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block'>
-								Покупка лояльності медіа
-							</div>
-						</div>
+					<div className='flex-1'>
+						<h2 className='text-white text-2xl font-bold'>{name}</h2>
+						<p className='text-white/50 text-lg'>{position}</p>
 					</div>
 				</div>
 
-				<div className=' flex flex-col gap-2'>
-					<div className='flex items-start justify-between bg-zinc-900 rounded-3xl p-6 relative'>
-						<div className='flex flex-col justify-center items-start gap-4'>
-							<Image
-								src='/2.jpeg'
-								alt='second-photo'
-								width={80}
-								height={80}
-								className='w-20 h-20 rounded-2xl'
-								style={{ objectFit: 'cover', objectPosition: 'center' }}
-							/>
-							<div>
-								<h2 className='text-white text-2xl font-bold'>
-									Андрій Рубель (ДСР)
-								</h2>
-								<p className='text-gray-400'>
-									Голова Департаменту стратегічних розслідувань
-								</p>
+				<div className='space-y-3 bg-neutral-800/80 p-6'>
+					{details.map((detail, index) => (
+						<div key={index} className='flex justify-between items-start'>
+							<div className='text-white font-medium w-1/3'>{detail.label}</div>
+							<div className='text-white/50 text-right w-2/3'>
+								{detail.description}
 							</div>
 						</div>
-						<div className='bg-amber-700/20 text-amber-500 px-3 py-1 rounded-full text-sm whitespace-nowrap absolute right-6 top-6'>
-							41 Вік
-						</div>
-					</div>
-
-					<div className='flex flex-col bg-zinc-900 rounded-3xl p-6 min-h-[520px]'>
-						<div className='mt-4'>
-							<h3 className='text-white text-lg mb-2'>Неофіційно</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Тіньовий дах схем Шкіля
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Посада</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Департамент стратегічних розслідувань (ДСР)
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Роль</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Захист від правоохоронних органів
-							</div>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								«імунітет» для підрядів
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Скандали</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Політичне лобіювання «своїх» бізнесменів
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div className='flex flex-col gap-2'>
-					<div className='flex relative items-start justify-between bg-zinc-900 rounded-3xl p-6'>
-						<div className='flex flex-col justify-center items-start gap-4 '>
-							<Image
-								src='/1.jpeg'
-								alt='third-photo'
-								width={80}
-								height={80}
-								className='w-20 h-20 rounded-2xl'
-								style={{ objectFit: 'cover', objectPosition: 'center' }}
-							/>
-							<div>
-								<h2 className='text-white text-2xl font-bold'>Роман Кравець</h2>
-								<p className='text-gray-400'>Журналіст «Української правди»</p>
-							</div>
-						</div>
-						<div className='bg-amber-700/20 text-amber-500 px-3 py-1 rounded-full text-sm whitespace-nowrap absolute right-6 top-6'>
-							41 Вік
-						</div>
-					</div>
-
-					<div className='flex flex-col bg-zinc-900 rounded-3xl p-6 min-h-[520px]'>
-						<div>
-							<h3 className='text-white text-lg mb-2'>Неофіційно</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Куратор Telegram-каналу «Джокер»
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Позиція</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Публічний журналіст, тіньовий медіакілер
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Роль</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Атаки на конкурентів
-							</div>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Просування піар-образу Шкіля
-							</div>
-						</div>
-
-						<div>
-							<h3 className='text-white text-lg mb-2'>Цікаво</h3>
-							<div className='bg-zinc-800 text-gray-400 px-4 py-2 rounded-full inline-block mb-2'>
-								Замішаний у проплачених медіакампаніях
-							</div>
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 		</div>

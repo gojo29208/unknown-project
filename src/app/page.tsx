@@ -9,7 +9,7 @@ import { Video } from '@/shared/ui/sections/video'
 export default function Home() {
 	return (
 		<div className='flex flex-col items-center justify-items-center min-h-screen gap-2'>
-			<main className='relative flex flex-col gap-[32px] row-start-2 items-center justify-center w-full min-[1440px]:w-360'>
+			<main className='relative flex flex-col gap-[32px] row-start-2 items-center justify-center w-full min-[1440px]:w-360 overflow-hidden'>
 				<Hero />
 
 				<JoinUs />

@@ -13,7 +13,7 @@ export function SocialLinks() {
 				<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-20'>
 					Відкрий очі прямо <br /> зараз: правду більше не сховають!
 				</h2>
-				<h4 className='absolute -bottom-0 right-20 w-54 text-[16px]'>
+				<h4 className='w-82 text-[16px] text-center'>
 					Підпишись зараз, щоб першим побачити велике розслідування.
 				</h4>
 			</div>
