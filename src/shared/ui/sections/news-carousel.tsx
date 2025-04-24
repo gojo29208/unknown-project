@@ -41,7 +41,7 @@ const newsItems: NewsItem[] = [
 		title: 'Медійна зачистка: Telegram-канали, Maybach і піар-кампанії',
 		subtitle: 'ЛАДНО, І ТАК ЗІЙДЕ',
 		description:
-			'Цікаво – Живе з ескортницею, ховається від українського правосуддя, не їздить на Uklon, використовує Trustee',
+			'Як створюють "ідеальний образ" і зачищають критику довкола Шкіля через гроші та анонімні канали',
 		image: '/carousel-3.jpeg',
 	},
 	{
@@ -56,7 +56,7 @@ const newsItems: NewsItem[] = [
 
 export function NewsCarousel() {
 	return (
-		<div className='relative flex flex-col justify-center items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-5 md:mb-30'>
+		<div className='relative flex flex-col justify-center items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-5 md:mb-10'>
 			<p className='text-sm text-center text-[#C62828] uppercase'>
 				Розслідувальні блоги
 			</p>
@@ -108,7 +108,7 @@ export function NewsCarousel() {
 					))}
 				</CarouselContent>
 				<p className='text-xs italic text-center mt-4 text-white opacity-70'>
-					* На зображеннях — реальні фотографії
+					* На зображеннях моста — реальні фотографії
 				</p>
 				<div className='flex justify-center mt-6 gap-4'>
 					<CarouselPrevious className='!relative cursor-pointer [&>svg]:size-6! left-auto !translate-none w-12 h-12 rounded-full bg-yellow-500! hover:bg-yellow-400 flex items-center justify-center text-black transition-colors' />

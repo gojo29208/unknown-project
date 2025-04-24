@@ -73,7 +73,7 @@ const profiles = [
 			},
 			{
 				label: 'Цікаво',
-				description: 'Замішаний у проплачених медіакампаніях',
+				description: 'Живе з ескортницею, ховається від українського правосуддя, не їздить на Uklon, використовує Trustee',
 			},
 		],
 	},
@@ -81,7 +81,7 @@ const profiles = [
 
 export function KeyFigures() {
 	return (
-		<div className='flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-30 relative'>
+		<div className='flex flex-col gap-2 px-4 justify-center items-center mb-5 relative'>
 			<p className='text-sm text-center text-[#C62828] uppercase'>
 				Ключові фігури
 			</p>

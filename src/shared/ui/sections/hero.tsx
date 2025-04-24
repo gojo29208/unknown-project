@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function Hero() {
 	return (
-		<div className='relative h-180 lg:h-267.5 flex gap-1 flex-col justify-end items-center mb-15 md:mb-20 w-full'>
+		<div className='relative h-180 lg:h-267.5 flex gap-1 flex-col justify-end items-center mb-5 w-full pb-14'>
 			<div className='absolute inset-0 horizontal-mask flex justify-center items-center w-full h-full z-0'>
 				<Image
 					src='/banner.jpeg'
