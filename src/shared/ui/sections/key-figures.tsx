@@ -125,7 +125,7 @@ export function KeyFigures() {
 			<Image
 				src='/pis.jpg'
 				alt='pis'
-				className='absolute -right-85 top-100 -rotate-5 rounded-4xl'
+				className='absolute -right-85 top-50 -rotate-5 rounded-4xl'
 				width={329}
 				height={419}
 			/>
@@ -133,7 +133,7 @@ export function KeyFigures() {
 			<Image
 				src='/rub.jpg'
 				alt='rub'
-				className='absolute -right-85 top-210 rotate-7 rounded-4xl'
+				className='absolute -right-85 top-160 rotate-7 rounded-4xl'
 				width={329}
 				height={419}
 			/>
@@ -141,7 +141,7 @@ export function KeyFigures() {
 			<Image
 				src='/dog.jpg'
 				alt='dog'
-				className='absolute -right-85 top-320 -rotate-5 rounded-4xl'
+				className='absolute -right-85 top-280 -rotate-5 rounded-4xl'
 				width={329}
 				height={419}
 			/>
