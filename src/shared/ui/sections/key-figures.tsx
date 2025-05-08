@@ -24,7 +24,7 @@ const profiles = [
 			{
 				label: 'Особлива прикмета',
 				description:
-					'Офшори на Мадейрі, paybach для піару, покупка лояльності медіа',
+					'Офшори на Мадейрі, maybach для піару, покупка лояльності медіа',
 			},
 		],
 	},
@@ -81,11 +81,9 @@ const profiles = [
 
 export function KeyFigures() {
 	return (
-		<div className='flex flex-col gap-2 px-4 justify-center items-center mb-5 relative'>
-			<p className='text-sm text-center text-[#C62828] uppercase'>
-				Ключові фігури
-			</p>
-			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-15'>
+		<div className='flex flex-col gap-2 px-4 justify-center items-center relative'>
+
+			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[750px] md:leading-17 pb-5'>
 				Дійові фігури <br /> великих корупційних схем
 			</h2>
 
@@ -102,12 +100,12 @@ export function KeyFigures() {
 				))}
 			</div>
 
-			<div className='absolute p-2 overflow-hidden w-[329px] h-[419px] -left-95 top-110 rotate-5 rounded-4xl'>
+			<div className='absolute p-2 overflow-hidden w-[329px] h-[419px] -left-85 top-110 rotate-5 rounded-4xl'>
 				<Image
 					fill
 					src='/forbes.jpg'
 					alt='forbes'
-					className='opacity-20'
+					className=''
 					style={{
 						objectFit: 'cover',
 						objectPosition: 'center',
@@ -119,7 +117,7 @@ export function KeyFigures() {
 			<Image
 				src='/joker.jpg'
 				alt='joker'
-				className='opacity-20 absolute -left-95 top-250 -rotate-5 rounded-4xl'
+				className='absolute -left-85 top-250 -rotate-5 rounded-4xl'
 				width={329}
 				height={419}
 			/>
@@ -127,7 +125,7 @@ export function KeyFigures() {
 			<Image
 				src='/pis.jpg'
 				alt='pis'
-				className='opacity-20 absolute -right-95 top-100 -rotate-5 rounded-4xl'
+				className='absolute -right-85 top-100 -rotate-5 rounded-4xl'
 				width={329}
 				height={419}
 			/>
@@ -135,7 +133,7 @@ export function KeyFigures() {
 			<Image
 				src='/rub.jpg'
 				alt='rub'
-				className='opacity-20 absolute -right-95 top-210 rotate-7 rounded-4xl'
+				className='absolute -right-85 top-210 rotate-7 rounded-4xl'
 				width={329}
 				height={419}
 			/>
@@ -143,7 +141,7 @@ export function KeyFigures() {
 			<Image
 				src='/dog.jpg'
 				alt='dog'
-				className='opacity-20 absolute -right-95 top-320 -rotate-5 rounded-4xl'
+				className='absolute -right-85 top-320 -rotate-5 rounded-4xl'
 				width={329}
 				height={419}
 			/>

@@ -56,10 +56,7 @@ const newsItems: NewsItem[] = [
 
 export function NewsCarousel() {
 	return (
-		<div className='relative flex flex-col justify-center items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-5 md:mb-10'>
-			<p className='text-sm text-center text-[#C62828] uppercase'>
-				Розслідувальні блоги
-			</p>
+		<div className='relative flex flex-col justify-center items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-15'>
 				За лаштунками <br /> багатомільярдних бюджетних угод
 			</h2>

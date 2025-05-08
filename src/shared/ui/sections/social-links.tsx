@@ -1,5 +1,5 @@
 import Telegram from '@root/public/telegram.svg'
-import Youtube from '@root/public/youtube.svg'
+// import Youtube from '@root/public/youtube.svg'
 import Mail from '@root/public/mail.svg'
 import { ExternalLink } from 'lucide-react'
 
@@ -7,19 +7,17 @@ export function SocialLinks() {
 	return (
 		<div className='relative flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-30'>
 			<div className='relative flex flex-col justify-center items-center w-full'>
-				<p className='text-sm text-center text-[#C62828] uppercase'>
-					Приєднуйся
-				</p>
-				<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-20'>
+				<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-20'> 
 					Відкрий очі прямо <br /> зараз: правду більше не сховають!
 				</h2>
-				<h4 className='w-82 text-[16px] text-center'>
-					Підпишись зараз, щоб першим побачити велике розслідування.
+				<h4 className='max-w-100 w-full text-[16px] text-center'>
+					Якщо у вас є доступ до будь-яких матеріалів, будемо вдячні, якщо
+					поділитеся ними з нами — ми готові запропонувати винагороду.
 				</h4>
 			</div>
 
 			<div className='w-full p-4'>
-				<div className='grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto'>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto'>
 					{/* Telegram Link */}
 					<div className='bg-zinc-900 rounded-lg p-4 flex items-center justify-between gap-3 lg:min-w-[250px]'>
 						<div className='flex items-center gap-3'>
@@ -35,7 +33,7 @@ export function SocialLinks() {
 					</div>
 
 					{/* YouTube Link */}
-					<div className='bg-zinc-900 rounded-lg p-4 flex items-center justify-between gap-3 lg:min-w-[250px]'>
+					{/* <div className='bg-zinc-900 rounded-lg p-4 flex items-center justify-between gap-3 lg:min-w-[250px]'>
 						<div className='flex items-center gap-3'>
 							<Youtube className='w-12 h-12' />
 						</div>
@@ -46,7 +44,7 @@ export function SocialLinks() {
 								<ExternalLink className='w-4 h-4' />
 							</div>
 						</div>
-					</div>
+					</div> */}
 
 					{/* Email Link */}
 					<div className='bg-zinc-900 rounded-lg p-4 flex items-center justify-between gap-3 lg:min-w-[250px]'>
