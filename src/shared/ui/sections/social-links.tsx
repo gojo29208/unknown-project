@@ -10,7 +10,7 @@ export function SocialLinks() {
 	const { ref } = useSectionInView('Контакти')
 	return (
 		<section
-			className='relative flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-30'
+			className='relative flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-5'
 			id='contact'
 			ref={ref}
 		>

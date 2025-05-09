@@ -49,7 +49,7 @@ export default function RootLayout({
 	return (
 		<html lang='en' className='!scroll-smooth' suppressHydrationWarning >
 			<body
-				className={`${nunito.className} dark flex flex-col items-center justify-items-center min-h-screen gap-2`}
+				className={`${nunito.className} dark flex flex-col items-center justify-items-center min-h-screen`}
 			>
 				<ActiveSectionContextProvider>
 					<Header />
