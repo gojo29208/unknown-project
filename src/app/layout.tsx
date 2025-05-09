@@ -1,6 +1,4 @@
 // import { ThemeProvider } from '@/shared/providers/theme-provider'
-import ActiveSectionContextProvider from '@/shared/context/active-section-context'
-import { Header } from '@/shared/ui/header'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
@@ -47,25 +45,20 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en' className='!scroll-smooth' suppressHydrationWarning >
+		<html lang='en' className='!scroll-smooth' suppressHydrationWarning>
 			<body
 				className={`${nunito.className} dark flex flex-col items-center justify-items-center min-h-screen`}
 			>
-				<ActiveSectionContextProvider>
-					<Header />
-					{/* <ThemeProvider
+				{/* <ThemeProvider
 					attribute='class'
 					defaultTheme='system'
 					enableSystem
 					disableTransitionOnChange
 				> */}
 
-					<main className='relative flex flex-col gap-8 row-start-2 items-center justify-center w-full min-[1440px]:w-360 overflow-hidden'>
-						{children}
-					</main>
+				{children}
 
-					{/* </ThemeProvider> */}
-				</ActiveSectionContextProvider>
+				{/* </ThemeProvider> */}
 			</body>
 		</html>
 	)

@@ -21,7 +21,7 @@ export function NewsCarousel() {
 			id='news'
 			ref={ref}
 		>
-			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-15'>
+			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-5'>
 				За лаштунками <br /> багатомільярдних бюджетних угод
 			</h2>
 			<Carousel
