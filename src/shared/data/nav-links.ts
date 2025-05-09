@@ -4,10 +4,6 @@ export const navlinks = [
 		hash: '#home',
 	},
 	{
-		name: 'Приєднуйся до нас',
-		hash: '#join-us',
-	},
-	{
 		name: 'Відео',
 		hash: '#video',
 	},

@@ -1,15 +1,6 @@
-'use client'
-
-import { useSectionInView } from '@/shared/hooks/use-section-in-view'
-
 export function JoinUs() {
-	const { ref } = useSectionInView('Приєднуйся до нас')
 	return (
-		<section
-			className='w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-4 px-4 -mt-26 md:-mt-0 lg:-mt-10'
-			id='join-us'
-			ref={ref}
-		>
+		<section className='w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-4 px-4 -mt-26 md:-mt-0 lg:-mt-10'>
 			<StatsCard heading='14,5 млрд' subheading='Грн з бюджету Києва' />
 			<StatsCard heading='7 млрд' subheading='На міст в бік Білорусі' />
 			<StatsCard heading='217,000,000€' subheading='на Мадейрі' />
