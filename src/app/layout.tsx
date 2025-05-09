@@ -1,4 +1,6 @@
 // import { ThemeProvider } from '@/shared/providers/theme-provider'
+import ActiveSectionContextProvider from '@/shared/context/active-section-context'
+import { Header } from '@/shared/ui/header'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
@@ -12,7 +14,7 @@ const nunito = Nunito({
 export const metadata: Metadata = {
 	title: 'Ляльководи епохи',
 	description: 'Хто керує потоками мільярдів і медіа в Україні?',
-
+	metadataBase: new URL('https://ms-capitall.com'),
 	openGraph: {
 		title: 'Ляльководи епохи',
 		description: 'Хто керує потоками мільярдів і медіа в Україні?',
@@ -45,16 +47,25 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en' suppressHydrationWarning>
-			<body className={`${nunito.className} antialiased dark`}>
-				{/* <ThemeProvider
+		<html lang='en' className='!scroll-smooth' suppressHydrationWarning >
+			<body
+				className={`${nunito.className} dark flex flex-col items-center justify-items-center min-h-screen gap-2`}
+			>
+				<ActiveSectionContextProvider>
+					<Header />
+					{/* <ThemeProvider
 					attribute='class'
 					defaultTheme='system'
 					enableSystem
 					disableTransitionOnChange
 				> */}
-				{children}
-				{/* </ThemeProvider> */}
+
+					<main className='relative flex flex-col gap-8 row-start-2 items-center justify-center w-full min-[1440px]:w-360 overflow-hidden'>
+						{children}
+					</main>
+
+					{/* </ThemeProvider> */}
+				</ActiveSectionContextProvider>
 			</body>
 		</html>
 	)

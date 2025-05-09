@@ -1,8 +1,16 @@
+'use client'
+
+import { useSectionInView } from '@/shared/hooks/use-section-in-view'
 import Image from 'next/image'
 
 export function Hero() {
+	const { ref } = useSectionInView('Головна')
 	return (
-		<div className='relative h-180 lg:h-225 flex gap-3 flex-col justify-end items-center w-full pb-26 md:pb-0 lg:pb-14'>
+		<section
+			className='relative h-180 lg:h-225 flex gap-3 flex-col justify-end items-center w-full pb-26 md:pb-0 lg:pb-14'
+			id='home'
+			ref={ref}
+		>
 			<div className='absolute inset-0 horizontal-mask flex justify-center items-center w-full h-full z-0'>
 				<Image
 					src='/banner.jpeg'
@@ -21,6 +29,6 @@ export function Hero() {
 				Незабаром — відеорозслідування, яке відкриє всі карти. Запам’ятай
 				ці обличчя. І ці схеми.
 			</h4>
-		</div>
+		</section>
 	)
 }

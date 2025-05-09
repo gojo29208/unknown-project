@@ -1,16 +1,24 @@
+'use client'
+
 import Telegram from '@root/public/telegram.svg'
 // import Youtube from '@root/public/youtube.svg'
+import { useSectionInView } from '@/shared/hooks/use-section-in-view'
 import Mail from '@root/public/mail.svg'
 import { ExternalLink } from 'lucide-react'
 
 export function SocialLinks() {
+	const { ref } = useSectionInView('Контакти')
 	return (
-		<div className='relative flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-30'>
+		<section
+			className='relative flex flex-col gap-2 px-4 justify-center items-center mb-5 md:mb-30'
+			id='contact'
+			ref={ref}
+		>
 			<div className='relative flex flex-col justify-center items-center w-full'>
-				<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-20'> 
+				<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-17 pb-5'>
 					Відкрий очі прямо <br /> зараз: правду більше не сховають!
 				</h2>
-				<h4 className='max-w-100 w-full text-[16px] text-center'>
+				<h4 className='max-w-140 w-full text-[16px] text-center'>
 					Якщо у вас є доступ до будь-яких матеріалів, будемо вдячні, якщо
 					поділитеся ними з нами — ми готові запропонувати винагороду.
 				</h4>
@@ -63,6 +71,6 @@ export function SocialLinks() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

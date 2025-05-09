@@ -1,3 +1,6 @@
+'use client'
+
+import { useSectionInView } from '@/shared/hooks/use-section-in-view'
 import Image from 'next/image'
 
 const profiles = [
@@ -73,16 +76,21 @@ const profiles = [
 			},
 			{
 				label: 'Цікаво',
-				description: 'Живе з ескортницею, ховається від українського правосуддя, не їздить на Uklon, використовує Trustee',
+				description:
+					'Живе з ескортницею, ховається від українського правосуддя, не їздить на Uklon, використовує Trustee',
 			},
 		],
 	},
 ]
 
 export function KeyFigures() {
+	const { ref } = useSectionInView('Ключові фігури')
 	return (
-		<div className='flex flex-col gap-2 px-4 justify-center items-center relative'>
-
+		<section
+			className='flex flex-col gap-2 px-4 justify-center items-center relative'
+			id='key-figures'
+			ref={ref}
+		>
 			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[750px] md:leading-17 pb-5'>
 				Дійові фігури <br /> великих корупційних схем
 			</h2>
@@ -145,7 +153,7 @@ export function KeyFigures() {
 				width={329}
 				height={419}
 			/>
-		</div>
+		</section>
 	)
 }
 

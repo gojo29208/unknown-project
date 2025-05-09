@@ -26,7 +26,7 @@ export function Timer() {
 	const [hours, minutes, seconds] = formatTimeParts(time)
 
 	return (
-		<div className='px-5 w-full'>
+		<div className='w-full'>
 			<div className='flex items-center justify-center gap-1 md:gap-4 border border-[#333] rounded-[30px] p-10 w-full mx-auto md:h-[765px] max-[500px]:h-[257px] max-md:aspect-video!'>
 				<div className='bg-[#1a1a1a] text-white text-[20px] sm:text-[30px] md:text-[80px] font-bold p-5 rounded-[16px] w-max text-center'>
 					{hours}
