@@ -1,4 +1,5 @@
 // import { ThemeProvider } from '@/shared/providers/theme-provider'
+import { PostHogProvider } from '@/shared/lib/ph-provider'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
@@ -55,8 +56,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				> */}
-
-				{children}
+				<PostHogProvider>{children}</PostHogProvider>
 
 				{/* </ThemeProvider> */}
 			</body>

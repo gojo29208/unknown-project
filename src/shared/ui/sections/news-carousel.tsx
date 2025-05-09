@@ -12,6 +12,7 @@ import {
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import posthog from 'posthog-js'
 
 export function NewsCarousel() {
 	const { ref } = useSectionInView('Новини')
@@ -31,7 +32,12 @@ export function NewsCarousel() {
 				<CarouselContent>
 					{newsItems.map(item => (
 						<CarouselItem key={item.id} className='md:basis-1/2 lg:basis-1/3'>
-							<Link href={`/news/${item.slug}`}>
+							<Link
+								href={`/news/${item.slug}`}
+								onNavigate={
+									() => posthog.capture('click-news', { property: item.title })
+								}
+							>
 								<div className='h-full flex flex-col overflow-hidden rounded-3xl  bg-zinc-900'>
 									<div className='relative h-48 sm:h-56 md:h-64'>
 										<Image
