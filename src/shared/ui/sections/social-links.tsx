@@ -58,14 +58,14 @@ export function SocialLinks() {
 					</div> */}
 
 					{/* Email Link */}
-					<Link href='#' target='_blank'>
+					<Link href='mailto:batmanwinsu@proton.me' target='_blank'>
 						<div className='bg-zinc-900 rounded-lg p-4 flex items-center justify-between gap-3 lg:min-w-[250px]'>
 							<div className='flex items-center gap-3'>
 								<Mail className='w-8 h-8 text-black' />
 							</div>
 							<div className='flex w-full flex-col items-start justify-start text-gray-400 hover:text-white transition-colors'>
 								<div className='text-white text-lg font-bold'>
-									ggmail@tuta.com
+									batmanwinsu@proton.me
 								</div>
 								<div className='flex justify-center items-center w-max text-[12px] cursor-pointer'>
 									<span className='mr-1'>Отримати</span>
