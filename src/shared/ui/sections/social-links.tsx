@@ -65,14 +65,14 @@ export function SocialLinks() {
 			<div className='w-full p-4'>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto'>
 					{/* Telegram Link */}
-					<Link href='https://t.me/batman_win_u' target='_blank'>
+					<Link href='https://t.me/batman_win' target='_blank'>
 						<div className='bg-zinc-900 rounded-lg p-4 flex items-center justify-between gap-3 lg:min-w-[250px]'>
 							<div className='flex items-center gap-3'>
 								<Telegram />
 							</div>
 							<div className='flex w-full flex-col items-start justify-start text-gray-400 hover:text-white transition-colors'>
 								<div className='text-white text-lg font-bold'>
-									@batman_win_u
+									@batman_win
 								</div>
 								<div className='flex justify-center items-center w-max text-[12px] cursor-pointer'>
 									<span className='mr-1'>Підписатись</span>
