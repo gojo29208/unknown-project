@@ -2,6 +2,7 @@
 
 import { useSectionInView } from '@/shared/hooks/use-section-in-view'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const profiles = [
 	{
@@ -108,51 +109,62 @@ export function KeyFigures() {
 				))}
 			</div>
 
-			<div className='absolute p-2 overflow-hidden w-[329px] h-[419px] -left-85 top-110 rotate-5 rounded-4xl'>
+			<Link
+				href='https://t.me/batman_win'
+				target='_blank'
+				className='absolute p-2 overflow-hidden w-[329px] h-[419px] -left-85 top-40 rotate-5 rounded-4xl hover:scale-[1.02] transition-transform'
+			>
 				<Image
 					fill
 					src='/forbes.jpg'
 					alt='forbes'
-					className=''
 					style={{
 						objectFit: 'cover',
 						objectPosition: 'center',
 						scale: '1.05',
 					}}
 				/>
-			</div>
+			</Link>
 
-			<Image
-				src='/joker.jpg'
-				alt='joker'
-				className='absolute -left-85 top-250 -rotate-5 rounded-4xl'
-				width={329}
-				height={419}
-			/>
+			<Link
+				href='https://t.me/batman_win'
+				className='absolute overflow-hidden -left-85 top-180 -rotate-5 rounded-4xl hover:scale-[1.02] transition-transform'
+			>
+				<Image width={329} height={419} src='/dsr.jpeg' alt='dsr' />
+			</Link>
 
-			<Image
-				src='/pis.jpg'
-				alt='pis'
-				className='absolute -right-85 top-50 -rotate-5 rounded-4xl'
-				width={329}
-				height={419}
-			/>
+			<Link
+				href='https://t.me/batman_win'
+				className='absolute overflow-hidden -left-85 top-280 rotate-5 rounded-4xl'
+			>
+				<Image src='/joker.jpg' alt='joker' width={329} height={419} />
+			</Link>
 
-			<Image
-				src='/rub.jpg'
-				alt='rub'
-				className='absolute -right-85 top-160 rotate-7 rounded-4xl'
-				width={329}
-				height={419}
-			/>
+			<Link
+				href='https://t.me/batman_win'
+				className='absolute overflow-hidden -right-85 top-20 -rotate-5 rounded-4xl hover:scale-[1.02] transition-transform'
+			>
+				<Image
+					src='/car-island.jpeg'
+					alt='car-island'
+					width={329}
+					height={419}
+				/>
+			</Link>
 
-			<Image
-				src='/dog.jpg'
-				alt='dog'
-				className='absolute -right-85 top-280 -rotate-5 rounded-4xl'
-				width={329}
-				height={419}
-			/>
+			<Link
+				href='https://t.me/batman_win'
+				className='absolute overflow-hidden -right-85 top-190 rotate-7 rounded-4xl hover:scale-[1.02] transition-transform'
+			>
+				<Image src='/rub.jpg' alt='rub' width={329} height={419} />
+			</Link>
+
+			<Link
+				href='https://t.me/batman_win'
+				className='absolute overflow-hidden -right-85 top-290 -rotate-5 rounded-4xl hover:scale-[1.02] transition-transform'
+			>
+				<Image src='/dog.jpg' alt='dog' width={329} height={419} />
+			</Link>
 		</section>
 	)
 }

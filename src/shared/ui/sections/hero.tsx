@@ -13,7 +13,7 @@ export function Hero() {
 		>
 			<div className='absolute inset-0 horizontal-mask flex justify-center items-center w-full h-full z-0'>
 				<Image
-					src='/banner.jpeg'
+					src='/banner-1.jpeg'
 					alt='banner'
 					fill
 					className='!relative vertical-mask-bottom'

@@ -1,13 +1,23 @@
 'use client'
 
 import { useSectionInView } from '@/shared/hooks/use-section-in-view'
-import { Timer } from './timer'
+import dynamic from 'next/dynamic'
+
+const Timer = dynamic(() => import('./timer').then(mod => mod.Timer), {
+	ssr: false,
+})
 
 export function Video() {
 	const { ref } = useSectionInView('Відео')
 	return (
-		<section className='relative flex flex-col justify-center items-center w-full gap-4 px-5' id='video' ref={ref}>
-			<p className='text-2xl text-center text-[#C62828] uppercase'>Coming soon</p>
+		<section
+			className='relative flex flex-col justify-center items-center w-full gap-4 px-5'
+			id='video'
+			ref={ref}
+		>
+			<p className='text-2xl text-center text-[#C62828] uppercase'>
+				Coming soon
+			</p>
 			<h2 className='text-white text-center text-3xl md:text-[50px] font-bold w-full max-w-[580px] md:leading-13'>
 				Незабаром <br /> грандіозне викриття корупційних схем
 			</h2>
@@ -16,7 +26,7 @@ export function Video() {
 				як вкрали 70% бюджету. Хто насправді стоїть за кулісами «70%
 				будівельного бюджету»?
 			</h4>
-			<Timer/>
+			<Timer />
 		</section>
 	)
 }
